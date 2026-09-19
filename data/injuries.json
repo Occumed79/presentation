@@ -1,0 +1,20 @@
+[
+{"id":"D001","latitude":36.7378,"longitude":-119.7871,"year":2024,"agency":"Demo Agency A","injury_type":"Strain","body_part":"Back","severity":4,"cost":18400,"lost_days":16,"status":"Closed"},
+{"id":"D002","latitude":36.7783,"longitude":-119.4179,"year":2025,"agency":"Demo Agency A","injury_type":"Sprain","body_part":"Shoulder","severity":3,"cost":9200,"lost_days":7,"status":"Closed"},
+{"id":"D003","latitude":38.5816,"longitude":-121.4944,"year":2025,"agency":"Demo Agency B","injury_type":"Laceration","body_part":"Hand","severity":2,"cost":4100,"lost_days":2,"status":"Closed"},
+{"id":"D004","latitude":34.0522,"longitude":-118.2437,"year":2026,"agency":"Demo Agency B","injury_type":"Fall","body_part":"Knee","severity":5,"cost":41600,"lost_days":34,"status":"Open"},
+{"id":"D005","latitude":32.7157,"longitude":-117.1611,"year":2024,"agency":"Demo Agency C","injury_type":"Strain","body_part":"Back","severity":4,"cost":22500,"lost_days":20,"status":"Closed"},
+{"id":"D006","latitude":33.4484,"longitude":-112.0740,"year":2025,"agency":"Demo Agency C","injury_type":"Heat","body_part":"Systemic","severity":3,"cost":7800,"lost_days":5,"status":"Closed"},
+{"id":"D007","latitude":39.7392,"longitude":-104.9903,"year":2026,"agency":"Demo Agency D","injury_type":"Fall","body_part":"Ankle","severity":4,"cost":19800,"lost_days":19,"status":"Open"},
+{"id":"D008","latitude":32.7767,"longitude":-96.7970,"year":2024,"agency":"Demo Agency D","injury_type":"Sprain","body_part":"Wrist","severity":2,"cost":5300,"lost_days":3,"status":"Closed"},
+{"id":"D009","latitude":29.7604,"longitude":-95.3698,"year":2025,"agency":"Demo Agency E","injury_type":"Strain","body_part":"Shoulder","severity":5,"cost":48700,"lost_days":41,"status":"Open"},
+{"id":"D010","latitude":30.2672,"longitude":-97.7431,"year":2026,"agency":"Demo Agency E","injury_type":"Laceration","body_part":"Hand","severity":2,"cost":6100,"lost_days":4,"status":"Closed"},
+{"id":"D011","latitude":44.9778,"longitude":-93.2650,"year":2025,"agency":"Demo Agency F","injury_type":"Fall","body_part":"Hip","severity":4,"cost":27200,"lost_days":26,"status":"Open"},
+{"id":"D012","latitude":41.8781,"longitude":-87.6298,"year":2024,"agency":"Demo Agency F","injury_type":"Strain","body_part":"Back","severity":3,"cost":11600,"lost_days":11,"status":"Closed"},
+{"id":"D013","latitude":33.7490,"longitude":-84.3880,"year":2026,"agency":"Demo Agency G","injury_type":"Vehicle","body_part":"Multiple","severity":5,"cost":58200,"lost_days":52,"status":"Open"},
+{"id":"D014","latitude":38.9072,"longitude":-77.0369,"year":2025,"agency":"Demo Agency G","injury_type":"Sprain","body_part":"Knee","severity":3,"cost":13700,"lost_days":12,"status":"Closed"},
+{"id":"D015","latitude":40.7128,"longitude":-74.0060,"year":2026,"agency":"Demo Agency H","injury_type":"Fall","body_part":"Back","severity":5,"cost":63500,"lost_days":61,"status":"Open"},
+{"id":"D016","latitude":39.9526,"longitude":-75.1652,"year":2024,"agency":"Demo Agency H","injury_type":"Laceration","body_part":"Arm","severity":2,"cost":4700,"lost_days":1,"status":"Closed"},
+{"id":"D017","latitude":47.6062,"longitude":-122.3321,"year":2025,"agency":"Demo Agency I","injury_type":"Strain","body_part":"Neck","severity":4,"cost":24100,"lost_days":23,"status":"Open"},
+{"id":"D018","latitude":45.5152,"longitude":-122.6784,"year":2026,"agency":"Demo Agency I","injury_type":"Sprain","body_part":"Ankle","severity":3,"cost":9700,"lost_days":8,"status":"Closed"}
+]
