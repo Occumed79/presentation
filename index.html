@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#05070b" />
+  <title>Occu-Med Data Cinema</title>
+  <link rel="preconnect" href="https://api.mapbox.com" />
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.30.0/mapbox-gl.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main id="app">
+    <div id="map" aria-label="Interactive 3D data map"></div>
+    <div id="scrim"></div>
+    <header class="topbar">
+      <div><div class="eyebrow">OCCU-MED · DATA CINEMA</div><div id="datasetName" class="dataset-name">Demo injury dataset</div></div>
+      <div class="top-actions">
+        <button id="loadDataBtn" type="button" class="ghost-btn">Load CSV / JSON</button>
+        <input id="fileInput" type="file" accept=".csv,.json,application/json,text/csv" hidden />
+        <button id="autoBtn" type="button" class="ghost-btn">Auto tour</button>
+      </div>
+    </header>
+    <section class="story-card" aria-live="polite">
+      <div class="scene-count"><span id="sceneNumber">01</span> / <span id="sceneTotal">05</span></div>
+      <div id="sceneKicker" class="scene-kicker">NATIONAL VIEW</div>
+      <h1 id="sceneTitle">The injury landscape</h1>
+      <p id="sceneBody">One dataset. One spatial story. Move from the national picture into the claims that are driving it.</p>
+      <div id="sceneMetric" class="metric-row"></div>
+    </section>
+    <aside class="scene-rail" id="sceneRail" aria-label="Presentation scenes"></aside>
+    <nav class="transport" aria-label="Presentation controls">
+      <button id="prevBtn" type="button" aria-label="Previous scene">←</button>
+      <div class="progress-track"><div id="progressBar"></div></div>
+      <button id="nextBtn" type="button" aria-label="Next scene">→</button>
+    </nav>
+    <section id="flourishPanel" class="flourish-panel" aria-hidden="true">
+      <button id="closeFlourish" type="button" class="close-flourish" aria-label="Close visualization">×</button>
+      <div id="flourishEmpty" class="flourish-empty">
+        <div class="eyebrow">FLOURISH SCENE READY</div>
+        <h2>Paste a Flourish embed URL into <code>config.js</code></h2>
+        <p>This scene is already wired. Add the URL and it becomes part of the presentation.</p>
+      </div>
+      <iframe id="flourishFrame" title="Embedded Flourish visualization" loading="lazy"></iframe>
+    </section>
+    <div id="tokenGate" class="token-gate">
+      <div class="token-card">
+        <div class="eyebrow">ONE-TIME SETUP</div>
+        <h2>Add your Mapbox public token</h2>
+        <p>Paste it in <strong>config.js</strong> at <code>mapboxToken</code>, commit, and reload. Everything else is already wired.</p>
+      </div>
+    </div>
+    <div id="status" class="status" role="status"></div>
+  </main>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.30.0/mapbox-gl.js"></script>
+  <script src="https://unpkg.com/deck.gl@^9.0.0/dist.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
