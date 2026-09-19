@@ -1,0 +1,2 @@
+id,latitude,longitude,year,agency,injury_type,body_part,severity,cost,lost_days,status
+EXAMPLE-001,36.7378,-119.7871,2026,Example Client,Strain,Back,3,12500,8,Closed
