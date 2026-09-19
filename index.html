@@ -16,6 +16,10 @@
     <header class="topbar">
       <div><div class="eyebrow">OCCU-MED · DATA CINEMA</div><div id="datasetName" class="dataset-name">Demo injury dataset</div></div>
       <div class="top-actions">
+        <div class="mode-switch" aria-label="Experience mode">
+          <button id="modeStory" type="button" class="mode-btn active">Story</button>
+          <button id="modeExplore" type="button" class="mode-btn">Explore</button>
+        </div>
         <button id="loadDataBtn" type="button" class="ghost-btn">Load CSV / JSON</button>
         <input id="fileInput" type="file" accept=".csv,.json,application/json,text/csv" hidden />
         <button id="autoBtn" type="button" class="ghost-btn">Auto tour</button>
@@ -29,6 +33,25 @@
       <div id="sceneMetric" class="metric-row"></div>
     </section>
     <aside class="scene-rail" id="sceneRail" aria-label="Presentation scenes"></aside>
+    <section id="explorePanel" class="explore-panel" aria-label="Explore controls">
+      <label>Metric
+        <select id="exploreMetric">
+          <option value="claims">Claim count</option>
+          <option value="severity">Severity</option>
+          <option value="cost">Cost</option>
+          <option value="lostDays">Lost days</option>
+        </select>
+      </label>
+      <label>Visual
+        <select id="exploreVisual">
+          <option value="points">Points</option>
+          <option value="columns" selected>3-D towers</option>
+          <option value="columns+points">Towers + points</option>
+          <option value="arcs">Relationships</option>
+        </select>
+      </label>
+      <div class="explore-hint">Drag · rotate · zoom · click a mark</div>
+    </section>
     <nav class="transport" aria-label="Presentation controls">
       <button id="prevBtn" type="button" aria-label="Previous scene">←</button>
       <div class="progress-track"><div id="progressBar"></div></div>
@@ -43,6 +66,16 @@
       </div>
       <iframe id="flourishFrame" title="Embedded Flourish visualization" loading="lazy"></iframe>
     </section>
+    <section id="modelPanel" class="model-panel" aria-hidden="true">
+      <button id="closeModel" type="button" class="close-model" aria-label="Close 3-D model">×</button>
+      <model-viewer id="clientModel" interaction-prompt="none" touch-action="pan-y"></model-viewer>
+      <div id="modelEmpty" class="model-empty">
+        <div class="eyebrow">3-D CLIENT STAGE READY</div>
+        <h2>Drop in any GLB / GLTF model.</h2>
+        <p>Ship, oil rig, aircraft, facility, equipment, anatomy, product—this scene type is reusable and configured per client.</p>
+        <code>modelUrl: './assets/models/client-model.glb'</code>
+      </div>
+    </section>
     <div id="tokenGate" class="token-gate">
       <div class="token-card">
         <div class="eyebrow">ONE-TIME SETUP</div>
@@ -55,6 +88,7 @@
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.30.0/mapbox-gl.js"></script>
   <script src="https://unpkg.com/deck.gl@^9.0.0/dist.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script src="./config.js"></script>
   <script src="./app.js"></script>
 </body>
